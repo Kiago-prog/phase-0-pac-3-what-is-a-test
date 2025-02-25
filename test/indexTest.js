@@ -29,10 +29,23 @@ describe('what-is-a-test', () => {
 // The code below ensures that students who are using CodeGrade will get credit 
 // for the code-along in Canvas; you can disregard it.
 
-describe('', () => {
-  describe('', () => {
-    it('', () => {
-      return true;
+  describe('Name', () => {
+    it('returns "Joe"', () => {
+      expect(name).toEqual('Joe')
     })
   })
-})
+
+
+  describe('Height', () => {
+    it('is less than 74', () => {
+      expect(height).toBeLessThan(75)
+    })
+  })
+
+  describe('Message', () => {
+    it('gives the name and height', () => {
+      expect(message).toInclude(name)
+      expect(message).toInclude(height)
+    })
+  })
+
